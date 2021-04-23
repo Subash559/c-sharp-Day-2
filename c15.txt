@@ -1,0 +1,25 @@
+using System;
+namespace Day_2 {
+   class Program {
+      static void Main() {
+          Console.WriteLine("Enter a string")
+         String inputString = Console.Readline();
+         int []charCount = new int[256];
+         int length = inputString.Length;
+         for (int index = 0; index < inputString.length; index++) {
+            charCount[inputString[index]]++;
+         }
+         int maxCount = -1;
+         char character = ' ';
+         for (int i = 0; i < length; i++) {
+            if (maxCount < charCount[str[i]]) {
+               maxCount = charCount[str[i]];
+               character = str[i];
+            }
+         }
+         Console.WriteLine("The string is: " + inputString);
+         Console.WriteLine("The highest occurring character in the above string is: " + character);
+         Console.WriteLine("Number of times this character occurs: " + maxCount);
+      }
+   }
+}
